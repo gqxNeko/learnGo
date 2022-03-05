@@ -9,19 +9,19 @@ func main() {
 		c
 		d
 		e = "hello world"
-		f = 100
-		g
+		f 
+		g = 100
 		h
 	)
-	var url = "a=%d\nb=%d\nc=%d\nd=%d\ne=%s\nf=%d\ng=%d\nh=%d"
+	var url = "a=%d\nb=%d\nc=%d\nd=%d\ne=%s\nf=%s\ng=%d\nh=%d"
 	var targetItem = fmt.Sprintf(url, a, b, c, d, e, f, g, h)
 	fmt.Println(targetItem)
 
 	const (
-		i = 1 << iota
-		j = 3 << iota
-		k
-		l
+		i = 1 << iota // iota = 0
+		j = 3 << iota // 1 ; iota += 1
+		k 						// 3<<iota 2 ; iota += 1
+		l 						// 3<<iota 3 ; iota += 1
 	)
 	fmt.Println(i,j,k,l)
 }
